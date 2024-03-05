@@ -58,6 +58,11 @@
     // Print item details
     public void PrintDetails()
     {
+        Console.WriteLine($"Item Name: {ItemName}");
+        Console.WriteLine($"Item ID: {ItemId}");
+        Console.WriteLine($"Price: ${Price:F2}");
+        Console.WriteLine($"Quantity in stock:{QuantityInStock}");
+        Console.WriteLine();
         // TODO: Print the details of the item (name, id, price, and stock quantity).
     }
 }
