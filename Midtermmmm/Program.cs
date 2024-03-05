@@ -21,19 +21,29 @@
     // Update the price of the item
     public void UpdatePrice(double newPrice)
     {
-        
+        Price = newPrice;
         // TODO: Update the item's price with the new price.
     }
 
     // Restock the item
     public void RestockItem(int additionalQuantity)
     {
+        QuantityInStock += additionalQuantity;
         // TODO: Increase the item's stock quantity by the additional quantity.
     }
 
     // Sell an item
     public void SellItem(int quantitySold)
     {
+        if (quantitySold > QuantityInStock)
+        {
+            Console.WriteLine("Insufficient stock sell the requested quantity");
+
+        }
+        else
+        {
+            QuantityInStock -= quantitySold;
+        }
         // TODO: Decrease the item's stock quantity by the quantity sold.
         // Make sure the stock doesn't go negative.
     }
@@ -41,6 +51,7 @@
     // Check if an item is in stock
     public bool IsInStock()
     {
+        return QuantityInStock > 0;
         // TODO: Return true if the item is in stock (quantity > 0), otherwise false.
     }
 
