@@ -74,6 +74,37 @@ class Program
         InventoryItem item1 = new InventoryItem("Laptop", 101, 1200.50, 10);
         InventoryItem item2 = new InventoryItem("Smartphone", 102, 800.30, 15);
 
+        //Details of all the items
+        Console.WriteLine("Initial Inventory");
+        item1.PrintDetails();
+        item2.PrintDetails();
+
+        //selling some items
+        item1.SellItem(4);
+        item2.SellItem(8);
+
+        //restocking an item
+        item1.RestockItem(4);
+
+        //updated details
+
+        Console.WriteLine("Updated Inventory");
+        item1.PrintDetails();
+        item2.PrintDetails();
+
+        //checking if the item is in stock
+        if (item2.IsInStock())
+        {
+            Console.WriteLine("intem2 (smartphone) is in stock");
+
+        }
+        else
+        {
+            Console.WriteLine("item2 (smartphone) is out of stock");
+
+        }
+    }
+}
         // TODO: Implement logic to interact with these objects.
         // Example tasks:
         // 1. Print details of all items.
@@ -82,5 +113,5 @@ class Program
         // 4. Check if an item is in stock and print a message accordingly.
 
 
-    }
-}
+    
+
